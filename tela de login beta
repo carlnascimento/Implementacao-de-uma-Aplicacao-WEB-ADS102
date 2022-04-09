@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <link rel="stylesheet" type="text/css" href="stilo.css" />
+    
+    <h1>System C5</h1>
+    
+    <h2>Nascimento<br>
+        networks</h2>
+    
+    <?php
+$bdServidor ='localhost';
+$bdUsuario ='root';
+$bdSenha='root';
+$banco='usuarios';
+
+
+    $conexao= mysqli_connect($bdServidor, $bdUsuario, $bdSenha, $banco) ;
+    
+    print("Você está conectado ao banco de dados, insira suas credenciais!");
+    
+    ?>
+    <br>
+    <br>
+    <form method="get" action="index.php">
+    <label> Nome: <input type="text" name="nome"/>
+        <br>
+        Senha: <input type="password" name="senha"/> 
+            <br>
+            
+           <input type="submit" value="entrar"/>
+           <label/>
+    </form>
+    <br>
+    <br>
+            <?php
+            if(isset($_GET['nome']))  {
+                
+                
+               # print("Seja bem-vindo: ".$_GET['nome']);
+                
+                
+               
+            }       
+                
+            
+            ?>
+            
